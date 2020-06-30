@@ -1,13 +1,11 @@
-from locust import HttpLocust, TaskSet, task
+from locust import HttpUser, task, between
 
 
-class MyTaskSet(TaskSet):
-    @task(1)
+class QuickStart(HttpUser):
+    wait_time = between(5, 9)
+
+    @task
     def index(self):
         self.client.get("/")
 
 
-class MyLocust(HttpLocust):
-    task_set = MyTaskSet
-    min_wait = 1000
-    max_wait = 2000

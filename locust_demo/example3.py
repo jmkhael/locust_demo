@@ -1,11 +1,13 @@
 import random
 
-from locust import HttpLocust, TaskSet, task
+from locust import HttpUser, task, between
 
 
-class MyTaskSet(TaskSet):
+class MyTaskSet(HttpUser):
+    wait_time = between(5, 9)
+
     def on_start(self):
-        res = self.client.post('/login',
+        res = self.client.post('login',
                          {
                              "username": 'admin',
                              "password": 'default'
@@ -20,13 +22,9 @@ class MyTaskSet(TaskSet):
     def entry(self):
         entry = random.randint(1, 6)
 
-        self.client.get(f"/entry/{entry}", name="Entry")
+        self.client.get(f"entry/{entry}", name="Entry")
 
     @task(1)
     def slow(self):
-        self.client.get('/slow')
+        self.client.get('slow')
 
-class MyLocust(HttpLocust):
-    task_set = MyTaskSet
-    min_wait = 1000
-    max_wait = 2000
