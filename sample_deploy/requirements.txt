@@ -8,7 +8,7 @@ certifi==2022.12.7      # via requests
 chardet==3.0.4            # via requests
 click==6.7                # via flask, pip-tools
 first==2.0.1              # via pip-tools
-flask==1.0             # via locustio
+flask==2.3.2             # via locustio
 gevent==1.2.2             # via locustio
 greenlet==0.4.12          # via gevent
 idna==2.6                 # via requests
