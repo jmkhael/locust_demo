@@ -13,7 +13,7 @@ gevent==1.2.2             # via locustio
 greenlet==0.4.12          # via gevent
 idna==3.7                 # via requests
 itsdangerous==0.24        # via flask
-jinja2==3.1.4             # via flask
+jinja2==3.1.5             # via flask
 locustio==0.8.1
 markupsafe==1.0           # via jinja2
 msgpack-python==0.4.8     # via locustio
