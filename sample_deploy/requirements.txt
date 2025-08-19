@@ -9,7 +9,7 @@ chardet==3.0.4            # via requests
 click==6.7                # via flask, pip-tools
 first==2.0.1              # via pip-tools
 flask==2.3.2             # via locustio
-gevent==1.2.2             # via locustio
+gevent==23.9.0             # via locustio
 greenlet==0.4.12          # via gevent
 idna==3.7                 # via requests
 itsdangerous==0.24        # via flask
