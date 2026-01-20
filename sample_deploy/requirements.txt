@@ -19,7 +19,7 @@ markupsafe==1.0           # via jinja2
 msgpack-python==0.4.8     # via locustio
 pip-tools==1.10.1
 pyzmq==16.0.2             # via locustio
-requests==2.32.2          # via locustio
+requests==2.32.4          # via locustio
 six==1.11.0               # via locustio, pip-tools
 urllib3==2.6.3             # via requests
 werkzeug==3.0.6          # via flask
