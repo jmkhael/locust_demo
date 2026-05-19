@@ -11,7 +11,7 @@ first==2.0.1              # via pip-tools
 flask==2.3.2             # via locustio
 gevent==23.9.0             # via locustio
 greenlet==0.4.12          # via gevent
-idna==3.7                 # via requests
+idna==3.15                 # via requests
 itsdangerous==0.24        # via flask
 jinja2==3.1.6             # via flask
 locustio==0.8.1
